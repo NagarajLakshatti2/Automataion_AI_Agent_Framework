@@ -1,0 +1,307 @@
+/*
+ * Custom CSS for JeshlaAIAgent
+ * Devin-like aesthetics with dark/light theme support
+ */
+
+/* Dark Theme (Default) */
+body[data-theme="dark"] .stApp {
+    background-color: #0e1117;
+}
+
+body[data-theme="dark"] .main {
+    background-color: #0e1117;
+}
+
+body[data-theme="dark"] .stSidebar {
+    background-color: #1a1d24;
+}
+
+body[data-theme="dark"] .stChatMessage {
+    background-color: #1a1d24;
+}
+
+/* Light Theme */
+body[data-theme="light"] .stApp {
+    background-color: #ffffff;
+}
+
+body[data-theme="light"] .main {
+    background-color: #ffffff;
+}
+
+body[data-theme="light"] .stSidebar {
+    background-color: #f5f5f5;
+}
+
+body[data-theme="light"] .stChatMessage {
+    background-color: #f5f5f5;
+}
+
+/* Chat Message Styling */
+.stChatMessage {
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 12px;
+}
+
+.stChatMessage[data-testid="stChatMessage-0"] {
+    background-color: #1e3a5f;
+}
+
+.stChatMessage[data-testid="stChatMessage-1"] {
+    background-color: #2d3748;
+}
+
+/* User message styling */
+body[data-theme="dark"] .stChatMessage[data-testid="stChatMessage-0"] .stMarkdown {
+    color: #ffffff;
+}
+
+body[data-theme="light"] .stChatMessage[data-testid="stChatMessage-0"] .stMarkdown {
+    color: #1a202c;
+}
+
+/* Assistant message styling */
+body[data-theme="dark"] .stChatMessage[data-testid="stChatMessage-1"] .stMarkdown {
+    color: #e2e8f0;
+}
+
+body[data-theme="light"] .stChatMessage[data-testid="stChatMessage-1"] .stMarkdown {
+    color: #2d3748;
+}
+
+/* Code block styling */
+.stCode {
+    background-color: #1a1d24;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #2d3748;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.stButton > button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    background-color: #1a1d24;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.streamlit-expanderContent {
+    background-color: #1e3a5f;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+/* Progress bar styling */
+.stProgress > div > div > div {
+    background-color: #3b82f6;
+}
+
+/* Sidebar elements */
+.stSelectbox > div > div > select {
+    background-color: #1a1d24;
+    color: #e2e8f0;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+}
+
+.stTextInput > div > div > input {
+    background-color: #1a1d24;
+    color: #e2e8f0;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+}
+
+/* Status indicators */
+.status-pending {
+    color: #fbbf24;
+}
+
+.status-in-progress {
+    color: #3b82f6;
+}
+
+.status-completed {
+    color: #10b981;
+}
+
+.status-failed {
+    color: #ef4444;
+}
+
+.status-active {
+    color: #10b981;
+}
+
+/* Agent cards */
+.agent-card {
+    background-color: #1a1d24;
+    border: 1px solid #2d3748;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    transition: all 0.2s;
+}
+
+.agent-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+/* Plan task styling */
+.task-item {
+    background-color: #1a1d24;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+.task-item.complexity-low {
+    border-left-color: #10b981;
+}
+
+.task-item.complexity-medium {
+    border-left-color: #fbbf24;
+}
+
+.task-item.complexity-high {
+    border-left-color: #f97316;
+}
+
+.task-item.complexity-critical {
+    border-left-color: #ef4444;
+}
+
+.task-item p {
+    margin: 4px 0;
+}
+
+/* Activity feed */
+.activity-item {
+    background-color: #1e3a5f;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* Metric cards */
+.metric-card {
+    background-color: #1a1d24;
+    border: 1px solid #2d3748;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #a0aec0;
+    margin-top: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .stChatMessage {
+        padding: 8px;
+        margin: 4px 0;
+    }
+
+    .stCode {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .agent-card {
+        padding: 12px;
+    }
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1d24;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2d3748;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* Loading spinner */
+.stSpinner {
+    color: #3b82f6;
+}
+
+/* Success/error/info messages */
+.stSuccess {
+    background-color: #064e3b;
+    border-left: 4px solid #10b981;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.stError {
+    background-color: #742a2a;
+    border-left: 4px solid #ef4444;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.stInfo {
+    background-color: #1e3a5f;
+    border-left: 4px solid #3b82f6;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.stWarning {
+    background-color: #744210;
+    border-left: 4px solid #f59e0b;
+    padding: 12px;
+    border-radius: 6px;
+}
